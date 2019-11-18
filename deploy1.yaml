@@ -3,19 +3,19 @@ kind: Deployment
 metadata:
   name: demo
   labels:
-    app: spring-boot
+    app: server
 spec:
   selector:
     matchLabels:
-      app: spring-boot
+      app: server
   template:
     metadata:
       labels:
-        app: spring-boot
+        app: server
     spec:
       containers:
-      - name: spring-boot
-        image: aurelia27/server4:v1
+      - name: server
+        image: marcel1111154/server:v1
         imagePullPolicy: Always
         resources:
           limits:
